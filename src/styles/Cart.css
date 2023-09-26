@@ -1,0 +1,73 @@
+/* Styles for screens larger than 650px */
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartItem {
+  width: 700px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  margin: 30px;
+}
+
+.cartItem img {
+  width: 200px;
+}
+
+.cartItem .description {
+  width: 100%;
+  font-size: 30px;
+}
+
+.countHandler input {
+  width: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.checkout button {
+  width: 150px;
+  height: 50px;
+  background-color: rgb(19, 19, 19);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* Styles for screens up to 650px */
+@media only screen and (max-width: 650px) {
+  .cartItem {
+    width: 100%; /* Make each item take up the full width */
+    height: auto; /* Allow items to expand vertically */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align content */
+  }
+
+  .cartItem img {
+    width: 100%; /* Make the image responsive to container width */
+    max-height: 150px; /* Set a maximum height for the image */
+    margin-bottom: 10px; /* Add spacing between the image and description */
+  }
+
+  .cartItem .description {
+    font-size: 20px; /* Reduce font size for smaller screens */
+    text-align: center; /* Center align description text */
+  }
+
+  .countHandler input {
+    width: 60px; /* Adjust the width for better touch interactions */
+  }
+
+  .checkout button {
+    width: 100%; /* Make the button take up the full width */
+    max-width: 250px; /* Set a maximum width for the button */
+  }
+}

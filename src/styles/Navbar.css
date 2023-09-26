@@ -1,0 +1,112 @@
+/* Base styles for the navbar */
+.navbar {
+  width: 100%;
+  height: 100px;
+  background-color: #121619;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar .leftSide {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 150px;
+}
+
+.navbar .leftSide img {
+  width: 70px;
+}
+
+.navbar .rightSide {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.navbar .rightSide button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar .rightSide svg {
+  font-size: 40px;
+}
+
+/* Styles for screens with a maximum width of 900px */
+@media only screen and (max-width: 900px) {
+  .navbar .leftSide {
+    padding-left: 50px;
+  }
+  .navbar .rightSide a {
+    width: 70px;
+  }
+}
+
+/* Styles for screens with a maximum width of 600px */
+@media only screen and (max-width: 600px) {
+  .navbar .rightSide a {
+    display: none; /* Hide navigation links */
+  }
+
+  .navbar .rightSide {
+    justify-content: flex-end;
+    padding-right: 20px; /* Reduce right padding for better spacing */
+  }
+
+  .navbar .rightSide button {
+    display: inherit; /* Display the menu button */
+  }
+
+  .navbar .leftSide {
+    padding-left: 20px; /* Reduce left padding for better spacing */
+  }
+
+  .navbar #open img {
+    display: none; /* Hide open menu icon */
+  }
+
+  .navbar #close img {
+    display: inherit; /* Display close menu icon */
+  }
+
+  .navbar #open .hiddenLinks {
+    display: inherit; /* Display hidden links */
+    margin-left: 10px; /* Adjust margin for better spacing */
+  }
+
+  .navbar #close .hiddenLinks {
+    display: none; /* Hide hidden links */
+  }
+
+  .navbar #open a {
+    width: 70px;
+    margin: 5px;
+  }
+}
+
+/* Styles for screens with a minimum width of 600px */
+@media only screen and (min-width: 600px) {
+  .navbar .rightSide button {
+    display: none; /* Hide the menu button */
+  }
+
+  .navbar #open img {
+    display: none; /* Hide open menu icon */
+  }
+
+  .hiddenLinks {
+    display: none; /* Hide hidden links */
+  }
+}
