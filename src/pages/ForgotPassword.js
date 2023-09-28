@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import backgroundImage from '../assets/logo5.jpg'; // Import your image
 
@@ -41,7 +40,7 @@ const ForgotPassword = () => {
       )}
 
       {/* Add the image at the bottom */}
-      <img src={backgroundImage} alt="Bottom Image" style={{ marginTop: 'auto' }} />
+      <img src={backgroundImage} alt="Logo" style={{ marginTop: 'auto' }} />
     </div>
   );
 };

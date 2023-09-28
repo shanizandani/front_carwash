@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useCallback } from 'react';
 import AuthContext from '../context/AuthContext';
 import BarcodeImage from '../assets/barkod.png';
 import "../styles/OrderList.css";
@@ -13,7 +13,7 @@ const OrderList = () => {
   const { authTokens, logoutUser } = useContext(AuthContext);
 
 
-  const getOrders = async () => {
+  const getOrders = useCallback(async () => {
     try {
       const response = await fetch('https://project-carwash.onrender.com/api/orders/', {
         method: 'GET',
@@ -32,7 +32,7 @@ const OrderList = () => {
     } catch (error) {
       console.error('Error fetching orders:', error);
     }
-  };
+  }, [authTokens.access, logoutUser]);
 
   useEffect(() => {
     getOrders();
@@ -172,6 +172,8 @@ const OrderList = () => {
 };
 
 export default OrderList;
+
+
 
 
 

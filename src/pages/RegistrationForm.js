@@ -4,7 +4,7 @@ import "../styles/RegistrationForm.css";
 import backgroundImage from '../assets/home2.jpg'; // Import your image
 
 const RegistrationForm = () => {
-  const { registerUser, loginUser } = useAuth();
+  const { registerUser} = useAuth();
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -68,7 +68,7 @@ const RegistrationForm = () => {
       </div>
 
       {/* Add the image at the bottom */}
-      <img src={backgroundImage} alt="Bottom Image" style={{ marginTop: 'auto' }} />
+      <img src={backgroundImage} alt="" style={{ marginTop: 'auto' }} />
     </div>
   );
 };
