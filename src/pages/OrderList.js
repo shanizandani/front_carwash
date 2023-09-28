@@ -18,7 +18,7 @@ const OrderList = () => {
 
   const getOrders = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/orders/', {
+      const response = await fetch('https://project-carwash.onrender.com/api/orders/', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ const OrderList = () => {
           washing_amount: updatedWashingAmount,
         };
 
-        const response = await fetch(`http://127.0.0.1:8000/api/orders/update/${orderId}/`, {
+        const response = await fetch(`https://project-carwash.onrender.com/api/orders/update/${orderId}/`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

@@ -9,7 +9,7 @@ export const MenuContextProvider = (props) => {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const response = await fetch("http://127.0.0.1:8000/api/products/", {
+        const response = await fetch("https://project-carwash.onrender.com/api/products/", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

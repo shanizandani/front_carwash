@@ -4,7 +4,7 @@ import "../styles/Cart.css"
 
 export const CartItem = (props) => {
   const { id, cover, name, price } = props.data;
-  const fullCoverURL = `http://127.0.0.1:8000${cover}`;
+  const fullCoverURL = `https://project-carwash.onrender.com${cover}`;
   const { cartItems,  addToCart, removeFromCart , updateCartItemCount} = useContext(MenuContext);
 
   return (

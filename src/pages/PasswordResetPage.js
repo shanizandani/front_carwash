@@ -11,7 +11,7 @@ function PasswordResetPage() {
   
     // Make an API request to reset the password with the new password and the extracted 'token' and 'encoded_pk'
     try {
-      const response = await fetch(`http://127.0.0.1:8000/password-reset/${encoded_pk}/${token}/`, {
+      const response = await fetch(`https://project-carwash.onrender.com/password-reset/${encoded_pk}/${token}/`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

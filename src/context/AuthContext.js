@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }) => {
     
     let loginUser = async (e) => {
         e.preventDefault();
-        let response = await fetch('http://127.0.0.1:8000/api/token/', {
+        let response = await fetch('https://project-carwash.onrender.com/api/token/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -56,7 +56,7 @@ export const AuthProvider = ({ children }) => {
 
     const registerUser = async (formData, e) => {
         try {
-          const response = await fetch('http://127.0.0.1:8000/api/register/', {
+          const response = await fetch('https://project-carwash.onrender.com/api/register/', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -104,7 +104,7 @@ export const AuthProvider = ({ children }) => {
 //   };
 const initiatePasswordReset = async (email, token) => {
   try {
-    const response = await fetch('http://127.0.0.1:8000/api/password-reset/', {
+    const response = await fetch('https://project-carwash.onrender.com/api/password-reset/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

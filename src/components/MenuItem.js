@@ -18,7 +18,7 @@ export const MenuItem = (props) => {
   // };
 
   // Construct the full URL for the cover image using MEDIA_URL and the cover property
-  const fullCoverURL = `http://127.0.0.1:8000${cover}`;
+  const fullCoverURL = `https://project-carwash.onrender.com${cover}`;
 
   return (
     <div className="menuItem">
