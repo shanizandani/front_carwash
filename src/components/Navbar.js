@@ -25,7 +25,7 @@ function Navbar() {
           <Link to="/menu"> Menu </Link>
           <Link to="/about"> About </Link>
           <Link to="/contact"> Contact </Link>
-          <Link to="/order"> Order </Link>
+          <Link to="/order"> Orders </Link>
           <Link to="/ShoppingCart"> {/* Add a Link to the shopping cart */}
           <ShoppingCartIcon style={{ color: "white", cursor: "pointer" }} />
         </Link>
@@ -37,7 +37,7 @@ function Navbar() {
         <Link to="/menu"> Menu </Link>
         <Link to="/about"> About </Link>
         <Link to="/contact"> Contact </Link>
-        <Link to="/order"> Order </Link>
+        <Link to="/order"> Orders </Link>
         <Link to="/ShoppingCart"> {/* Add a Link to the shopping cart */}
           <ShoppingCartIcon style={{ color: "white", cursor: "pointer" }} />
         </Link>
